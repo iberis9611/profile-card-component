@@ -65,7 +65,7 @@ body {
 }
 
 /* || PROFILE CARD */
-.card {
+.main {
     width: var(--CARD-WIDTH);
     background-color: var(--CARD-BGCOLOR);
     display: flex;
@@ -74,11 +74,11 @@ body {
     border-radius: var(--BORDER-RADIUS);
 }
 
-.card_header {
+.hero {
     position: relative;
 }
 
-.card_header img {
+.hero img {
     border-top-left-radius: var(--BORDER-RADIUS);
     border-top-right-radius: var(--BORDER-RADIUS);
 }

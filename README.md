@@ -5,7 +5,7 @@
 ### What I learned
 1. How to float an image in between sections.
 ```css
-.card_header {
+.hero {
     position: relative;
 }
 .profile img {
