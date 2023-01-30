@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* || Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img { 
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* || UITILITY CLASSES */
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.gray {
+    color: hsl(0, 0%, 59%);
+}
+
+/* || VARIABLES */
+:root {
+    /* FONTS */
+    --FF: 'Kumbh Sans', sans-serif;
+    --FS: 18px;
+    --FS-M: 14px;
+    --FS-S: 10px;
+
+    /* COLOR */
+    --BODY-BGCOLOR: hsl(185, 75%, 39%);
+    --CARD-BGCOLOR: hsl(0, 0%, 100%);
+
+    /* WIDTH */
+    --CARD-WIDTH: 327px;
+    --PROFILE-WIDTH: 100px;
+
+    /* BORDER */
+    --BORDER-RADIUS: 15px;
+    --PROFILE-RADIUS: 50%;
+}
+
+/* || GENERAL */
+body {
+    font-family: var(--FF);
+    font-size: var(--FS);
+    text-align: center;
+    min-height: 100vh;
+    background-color: var(--BODY-BGCOLOR);
+    background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat;
+    background-position: top -74vh right calc(100vw/2), bottom -86vh left calc(100vw/2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* || PROFILE CARD */
+.card {
+    width: var(--CARD-WIDTH);
+    background-color: var(--CARD-BGCOLOR);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: var(--BORDER-RADIUS);
+}
+
+.card_header {
+    position: relative;
+}
+
+.card_header img {
+    border-top-left-radius: var(--BORDER-RADIUS);
+    border-top-right-radius: var(--BORDER-RADIUS);
+}
+
+.profile img {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    width: var(--PROFILE-WIDTH);
+}
+
+.profile {
+    position: absolute;
+    bottom: calc(0px - var(--PROFILE-WIDTH)/2);
+    left: calc(var(--CARD-WIDTH)/2 - var(--PROFILE-WIDTH)/2);
+}
+
+.user_info {
+    margin-top: 50px;
+}
+
+.city {
+    font-size: var(--FS-M);
+    margin-top: 10px;
+}
+
+.trivia {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 25px 0;
+    border-top: 1px solid gainsboro;
+}
+
+.title {
+    font-size: var(--FS-S);
+    letter-spacing: 2px;
+}
+
+/* desktop */
+@media screen and (min-width: 576px) {
+    :root {
+        --CARD-WIDTH: 350px;
+    }
+}
